@@ -18,6 +18,7 @@ header {
 
 .nav-bar {
 	display: flex;
+	position: relative;
 }
 
 .logo {
@@ -133,15 +134,25 @@ header {
 
 footer {
     padding: 10px;
+	align-items: center;
 
     background-color: #333;
     color: white;
-    text-align: center;
     font-size: 14px;
 }
 
 footer p {
     margin: 0;
+	margin-bottom: 10px;
+
+	text-align: center;
+}
+
+footer .contacts p {
+	margin: 0;
+	margin-left: 50px;
+
+	text-align: left;
 }
 
 
@@ -182,6 +193,8 @@ footer p {
 	.drop:hover .nav-list{
 		display: block;
 		position: absolute;
+		
+		z-index: 1;
 		right: 0;
 		
 		background: #0073e6;
