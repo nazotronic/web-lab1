@@ -2,35 +2,41 @@ body {
 	margin: 0;
     padding: 0;
 	
-    background: #f1e0e0;
-    color: #333;
+    background: #241313;
 
     font-family: Arial, sans-serif;
 }
 
 header {
-    padding: 5px;
-    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    padding: 10px;
 
-    background: #0073e6;
-    color: white;
+    background: transparent;
+    z-index: 10;
 }
 
 .nav-bar {
 	display: flex;
-	position: relative;
+	justify-content: flex-start;
 }
 
 .logo {
     display: flex;
     flex-direction: column;
+
 	width: 80px;
+	margin-right: 20%;
+
+	color:aqua
 }
 
 .logo p {
 	font-style: italic;
     font-weight: bold;
-    font-size: 14px; 
+    font-size: 20px; 
 }
 
 .logo-text-up {
@@ -61,16 +67,18 @@ header {
 
 	margin-inline: 15px;
 	padding: 10px;
-	
-	border: 2px solid none;
-	border-radius: 15%;
 
-	color:antiquewhite;
+	border-radius: 100px;
+	border-style: solid;
+	border-color: transparent;
+	
+	color:aqua;
 	text-decoration: none;
 	font-weight: bold;
+	font-size: 25px;
 }
 
-.image-container {
+.video-container {
 	display: flex;
 	position: relative;
 
@@ -78,28 +86,20 @@ header {
 	align-items: center;
 }
 
-.image-container img {
+.video-container::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
 	width: 100%;
-	height: 350px;
-	object-fit: cover;
+	height: 100px; /* Висота затемнення */
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #241313 100%);
+	pointer-events: none; /* Щоб градієнт не заважав клікам по відео */
 }
 
-.image-container p {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	
-	width: 200;
-	margin: 0;
-	padding: 10px;
-
-	font-size: 20px;
-	font-weight: bold;
-
-	color: white;
-	text-align: center;
-	background: rgba(0, 0, 0, 0.5);
-	border-radius: 10px;
+.video-container video {
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
 }
 
 .info-pocket {
@@ -113,55 +113,47 @@ header {
 
 .circle-container {
 	display: block;
-
 	position: absolute;
+	
+	padding: 15px;
+
 	top: -25px;
 	width: 400px;
-	padding: 15px;
 	
 	text-align: center;
 
-	background-color: #f9f4f4;
+	background-color: #271414;
 	border-radius: 100px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	border-color: aqua;
+	border-style: solid;
 }
+
 .circle-container p {
 	margin: 0;
 
 	font-size: 30px;
 	font-weight: bold;
+
+	color: aqua;
 }
 
 footer {
+	margin-top: 30px;
     padding: 10px;
-	align-items: center;
 
     background-color: #333;
     color: white;
+    text-align: center;
     font-size: 14px;
 }
 
 footer p {
     margin: 0;
-	margin-bottom: 10px;
-
-	text-align: center;
 }
 
-footer .contacts p {
-	margin: 0;
-	margin-left: 50px;
-
-	text-align: left;
-}
-
-
-.nav-but:hover {
-	background:#0260bf;
-}
 
 .nav-list a:hover {
-	background:#0260bf;
+	border-color:aqua;
 }
 
 
@@ -176,12 +168,12 @@ footer .contacts p {
 		margin-left: 2px;
 		padding-block: 1px;
 		padding-inline: 10px;
-		
-		border: 2px solid #0073e6;
-		border-radius: 15%;
 
-		color: antiquewhite;
-		background: #0073e6;
+		background: transparent;
+		border-radius: 10px;
+		border-color: transparent;
+		border-style: solid;
+		color: aqua;
 		
 		font-size: 1.6em;
 	}
@@ -189,14 +181,18 @@ footer .contacts p {
 	.nav-list {
 		display: none;
 	}
+
+
+	.nav-but:hover {
+		border-color:aqua;
+	}
 	
 	.drop:hover .nav-list{
 		display: block;
 		position: absolute;
-		
+
 		z-index: 1;
 		right: 0;
 		
-		background: #0073e6;
 	}
 }

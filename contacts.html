@@ -4,15 +4,19 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Tours</title>
+
+		<!-- Leaflet CSS -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+		<!-- Leaflet JS -->
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+		
 		<link rel="stylesheet" href="styles/styles.css">
-		<link rel="stylesheet" href="styles/cards-styles.css">
 		<link rel="stylesheet" href="styles/contacts-styles.css">
 	</head>
 
 	<body>
 		<header>
 			<nav class="nav-bar">
-				<!-- <img src="images/logo.png" alt="logo"> -->
 				<div class="logo">
 					<p class="logo-text-up">best</p>
 					<p class="logo-text-down">tours</p>
@@ -31,9 +35,8 @@
 		</header>
 
 		<main>
-			<div class="image-container">
-				<img src="images/background1.jpg" alt="background1">
-				<p>Best deals<br>Lowest prices!</p>
+			<div class="video-container">
+				<video src="videos/background.mp4" autoplay muted loop></video>
 			</div>
 
 			<div class="info-pocket">
@@ -65,7 +68,12 @@
 			</section>
 
 			<section class="about-us">
-				<img src="images/location.png" alt="location">
+				<div class="map-container">
+					<div id="map-overlay">
+						<p>Click to open</p>
+					</div>
+					<div id="map"></div>
+				</div>
 
 				<div class="contacts">
 					<div class="phone">
@@ -89,5 +97,7 @@
 		<footer>
 			<p>&copy; 2025 Best Tours. All rights reserved.</p>
 		</footer>
+
+		<!-- <script src="contacts.js"></script> -->
 	</body>
 </html>
